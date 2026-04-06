@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Estrieet/Course/static/css/main.349009ba.css",
-    "main.js": "/Estrieet/Course/static/js/main.e002e03f.js",
-    "index.html": "/Estrieet/Course/index.html",
-    "main.349009ba.css.map": "/Estrieet/Course/static/css/main.349009ba.css.map",
-    "main.e002e03f.js.map": "/Estrieet/Course/static/js/main.e002e03f.js.map"
+    "main.css": "/Course/static/css/main.6d7764d2.css",
+    "main.js": "/Course/static/js/main.4b6dbca0.js",
+    "index.html": "/Course/index.html",
+    "main.6d7764d2.css.map": "/Course/static/css/main.6d7764d2.css.map",
+    "main.4b6dbca0.js.map": "/Course/static/js/main.4b6dbca0.js.map"
   },
   "entrypoints": [
-    "static/css/main.349009ba.css",
-    "static/js/main.e002e03f.js"
+    "static/css/main.6d7764d2.css",
+    "static/js/main.4b6dbca0.js"
   ]
 }
