@@ -1,11 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
-import userReducer from './slices/userSlice';
 import progressReducer from './slices/progressSlice';
 
 export const store = configureStore({
   reducer: {
-    user: userReducer,
     progress: progressReducer,
   },
 });

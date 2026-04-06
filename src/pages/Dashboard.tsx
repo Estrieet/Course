@@ -26,6 +26,8 @@ const Dashboard: React.FC = () => {
             key={lesson.id}
             id={lesson.id}
             title={lesson.title}
+            image={lesson.image}
+            summary={lesson.summary?.[0] ?? lesson.content.slice(0, 80) + '...'}
             completed={progress.completedLessons.includes(lesson.id)}
             unlocked={progress.unlockedLessons.includes(lesson.id)}
           />

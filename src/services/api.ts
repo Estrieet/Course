@@ -1,9 +1,9 @@
-export const getFromStorage = (key: string): any => {
+export const getFromStorage = <T>(key: string): T | null => {
   const item = localStorage.getItem(key);
-  return item ? JSON.parse(item) : null;
+  return item ? (JSON.parse(item) as T) : null;
 };
 
-export const setToStorage = (key: string, value: any): void => {
+export const setToStorage = <T>(key: string, value: T): void => {
   localStorage.setItem(key, JSON.stringify(value));
 };
 

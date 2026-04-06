@@ -3,6 +3,8 @@ import lessonsData from '../data/lessons.json';
 export interface Lesson {
   id: number;
   title: string;
+  image?: string;
+  summary?: string[];
   content: string;
   module: string;
   level: number;
@@ -21,7 +23,7 @@ export interface QuizQuestion {
   id: number;
   question: string;
   options: string[];
-  answer: string;
+  answer: number;
 }
 
 export const getLessons = (): Lesson[] => {

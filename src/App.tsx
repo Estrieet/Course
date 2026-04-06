@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './store/store';
 import Header from './components/Header';
@@ -7,36 +7,42 @@ import Sidebar from './components/Sidebar';
 import HelpButton from './components/HelpButton';
 import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
+import Lessons from './pages/Lessons';
 import Lesson from './pages/Lesson';
 import Typing from './pages/Typing';
 import Quiz from './pages/Quiz';
+import QuizList from './pages/QuizList';
 import Progress from './pages/Progress';
 import Help from './pages/Help';
-import Login from './pages/Login';
+import Teacher from './pages/Teacher';
 import Register from './pages/Register';
-import { useAuth } from './hooks/useAuth';
 
 const AppContent: React.FC = () => {
-  const { user } = useAuth();
-
   return (
-    <div className="min-h-screen bg-gray-100">
-      <Header />
-      <div className="flex">
-        {user && <Sidebar />}
-        <main className="flex-1 p-6">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={user ? <Navigate to="/dashboard" /> : <Login />} />
-            <Route path="/register" element={user ? <Navigate to="/dashboard" /> : <Register />} />
-            <Route path="/dashboard" element={user ? <Dashboard /> : <Navigate to="/login" />} />
-            <Route path="/lesson/:id" element={user ? <Lesson /> : <Navigate to="/login" />} />
-            <Route path="/typing" element={user ? <Typing /> : <Navigate to="/login" />} />
-            <Route path="/quiz/:id" element={user ? <Quiz /> : <Navigate to="/login" />} />
-            <Route path="/progress" element={user ? <Progress /> : <Navigate to="/login" />} />
-            <Route path="/help" element={<Help />} />
-          </Routes>
-        </main>
+    <div className="min-h-screen bg-slate-950 text-slate-100">
+      <div className="relative overflow-hidden">
+        <Header />
+        <div className="absolute -top-24 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-violet-500/20 blur-3xl" />
+        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-fuchsia-500/10 blur-3xl" />
+        <div className="relative flex flex-col xl:flex-row gap-6 px-4 py-6 xl:px-8 xl:py-8 mx-auto w-full max-w-7xl">
+          <Sidebar />
+          <main className="flex-1 min-w-0">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/lessons" element={<Lessons />} />
+              <Route path="/lesson/:id" element={<Lesson />} />
+              <Route path="/typing" element={<Typing />} />
+              <Route path="/quiz" element={<QuizList />} />
+              <Route path="/quiz/:id" element={<Quiz />} />
+              <Route path="/progress" element={<Progress />} />
+              <Route path="/teacher" element={<Teacher />} />
+              <Route path="/help" element={<Help />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="*" element={<Home />} />
+            </Routes>
+          </main>
+        </div>
       </div>
       <HelpButton />
     </div>

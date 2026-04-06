@@ -1,0 +1,127 @@
+{
+  "1": [
+    { "icon": "🖥️", "title": "Desktop Computer", "description": "A large stationary computer used at home or in offices, with a separate screen, keyboard and mouse." },
+    { "icon": "💻", "title": "Laptop", "description": "A portable computer with a built-in screen and keyboard. Runs on battery so you can use it anywhere." },
+    { "icon": "📱", "title": "Smartphone", "description": "A pocket-sized computer you can also use to make phone calls, take photos, and browse the web." }
+  ],
+  "2": [
+    { "icon": "🧠", "title": "CPU — The Brain", "description": "The Central Processing Unit does all the thinking and calculations. A faster CPU means a faster computer." },
+    { "icon": "📝", "title": "RAM — Short-term Memory", "description": "Random Access Memory holds what the computer is working on right now. More RAM = more tasks at once." },
+    { "icon": "💾", "title": "Hard Drive — Long-term Storage", "description": "Stores your files, photos, and programs even when the computer is turned off. SSDs are faster than HDDs." }
+  ],
+  "3": [
+    { "icon": "🪟", "title": "Operating System", "description": "Windows, macOS, and Linux are operating systems. They manage everything the computer does and show the desktop." },
+    { "icon": "🌐", "title": "Web Browser", "description": "Google Chrome, Firefox, and Edge are browsers. They let you visit websites and explore the internet." },
+    { "icon": "📄", "title": "Word Processor", "description": "Microsoft Word and Google Docs let you write letters, reports, and documents and save them as files." }
+  ],
+  "4": [
+    { "icon": "▶️", "title": "Starting Up", "description": "Press the power button once and wait. The operating system loads — this usually takes 30 seconds to 2 minutes." },
+    { "icon": "⏹️", "title": "Shutting Down Properly", "description": "Always use Start > Shut Down. This saves your work and keeps files safe before turning off the power." },
+    { "icon": "🔄", "title": "Restarting", "description": "Restarting clears problems and installs updates. If your computer is slow or frozen, try restarting first." }
+  ],
+  "5": [
+    { "icon": "👆", "title": "Left Click", "description": "Tap the left mouse button once to select something, and double-click to open a file or program." },
+    { "icon": "📋", "title": "Right Click", "description": "Tap the right mouse button to open a menu with extra options like Copy, Paste, and Properties." },
+    { "icon": "🖱️", "title": "Scroll Wheel", "description": "Roll the middle wheel up and down to scroll through long pages and documents without using the scroll bar." }
+  ],
+  "6": [
+    { "icon": "⇧", "title": "Shift Key", "description": "Hold Shift while typing a letter to make it uppercase. Shift + a number key types special characters like ! @ #." },
+    { "icon": "⌨️", "title": "Shortcut Keys", "description": "Ctrl+C copies, Ctrl+V pastes, Ctrl+Z undoes. Learning shortcuts saves lots of time." },
+    { "icon": "↵", "title": "Enter Key", "description": "Press Enter to confirm something, start a new line when typing, or run a search." }
+  ],
+  "7": [
+    { "icon": "📁", "title": "Folders are like Drawers", "description": "Just like a filing cabinet has drawers, folders on a computer organise files into groups. You can make folders inside folders." },
+    { "icon": "📄", "title": "Files are Documents", "description": "A file is any item stored on a computer — a photo, a letter, a song, or a program. Files have names and types like .jpg or .pdf." },
+    { "icon": "🔍", "title": "Finding Files", "description": "Use the search bar in File Explorer (Windows) to find a file by name. Searching is faster than clicking through folders." }
+  ],
+  "8": [
+    { "icon": "🖼️", "title": "Icons are Shortcuts", "description": "Every icon on the desktop is a shortcut to a program or file. Double-click any icon to open it." },
+    { "icon": "📌", "title": "Taskbar", "description": "The bar at the bottom of the screen shows open programs and quick-launch icons. Click an icon to switch between windows." },
+    { "icon": "🗑️", "title": "Recycle Bin", "description": "When you delete a file it goes to the Recycle Bin first. You can restore it or empty the bin to free up space." }
+  ],
+  "9": [
+    { "icon": "🌍", "title": "World Wide Web", "description": "The web is a collection of billions of pages and files linked together. You access it through a web browser." },
+    { "icon": "📡", "title": "Wi-Fi & Broadband", "description": "Wi-Fi connects your device wirelessly to a router. The router connects to your internet service provider (ISP) which links to the world." },
+    { "icon": "🔗", "title": "Links & URLs", "description": "Every website has a unique address called a URL (e.g. www.google.com). Links are clickable shortcuts to other pages." }
+  ],
+  "10": [
+    { "icon": "📑", "title": "Tabs", "description": "Open multiple websites at once using tabs at the top of the browser. Click a tab to switch between pages without losing your place." },
+    { "icon": "🔖", "title": "Bookmarks", "description": "Save websites you visit often as bookmarks. Click the star icon in the address bar to bookmark a page." },
+    { "icon": "🔙", "title": "Back & Refresh", "description": "The back arrow takes you to the previous page. The refresh button reloads the current page if it is slow or shows an error." }
+  ],
+  "11": [
+    { "icon": "🔎", "title": "Using Keywords", "description": "Type short, specific words into a search engine. 'best free email app 2024' works better than 'what is a good email app to use please'." },
+    { "icon": "✅", "title": "Checking Sources", "description": "Not everything online is true. Look for well-known, trusted websites and check if multiple sources say the same thing." },
+    { "icon": "📰", "title": "Reading Results", "description": "The first results are often ads (marked 'Sponsored'). Scroll past them to find organic search results which are usually more reliable." }
+  ],
+  "12": [
+    { "icon": "✉️", "title": "Composing an Email", "description": "Click New/Compose, type the recipient's address in the To: field, add a subject, write your message, then click Send." },
+    { "icon": "📎", "title": "Attachments", "description": "You can attach photos, documents, or files to an email by clicking the paperclip icon. Keep attachments under 25MB." },
+    { "icon": "📬", "title": "Inbox & Folders", "description": "Received emails go to your Inbox. Use folders like Spam, Sent, and Drafts to organise your messages." }
+  ],
+  "13": [
+    { "icon": "🔒", "title": "Strong Passwords", "description": "Use at least 12 characters mixing letters, numbers and symbols. Never share your password and use a different one for each account." },
+    { "icon": "🎣", "title": "Phishing Scams", "description": "Scammers send fake emails pretending to be banks or companies. Never click suspicious links or give personal details via email." },
+    { "icon": "🛡️", "title": "Antivirus Software", "description": "Keep antivirus software installed and updated. It scans for harmful programs and warns you before you download dangerous files." }
+  ],
+  "14": [
+    { "icon": "👤", "title": "Creating a Profile", "description": "Your profile includes a name, photo, and bio. Keep personal details like your address and phone number private." },
+    { "icon": "📢", "title": "Posting & Sharing", "description": "You can post text, photos, and videos for friends or the public to see. Think carefully before posting — it can be difficult to remove." },
+    { "icon": "🤝", "title": "Online Etiquette", "description": "Be respectful in comments and messages. Cyberbullying is harmful — report and block accounts that behave badly." }
+  ],
+  "15": [
+    { "icon": "🖊️", "title": "Formatting Text", "description": "Use Bold, Italic, and Underline to emphasise words. Change font size and colour to make headings stand out." },
+    { "icon": "💾", "title": "Saving Your Work", "description": "Press Ctrl+S to save regularly. Use File > Save As to save a copy with a new name or in a different format like PDF." },
+    { "icon": "🖨️", "title": "Printing a Document", "description": "Go to File > Print (or Ctrl+P). Choose your printer, check the preview, and click Print. Save as PDF if you have no printer." }
+  ],
+  "16": [
+    { "icon": "➕", "title": "Basic Formulas", "description": "Start a formula with =. Type =SUM(A1:A10) to add up a column, or =AVERAGE(B2:B8) to find the average of a range." },
+    { "icon": "📊", "title": "Charts & Graphs", "description": "Select your data, then click Insert > Chart. Bar, line, and pie charts make numbers easy to understand at a glance." },
+    { "icon": "🗃️", "title": "Sorting & Filtering", "description": "Click on a column header and use Sort A→Z to order data. Use Filter to show only rows that match certain conditions." }
+  ],
+  "17": [
+    { "icon": "🛒", "title": "Adding to Cart", "description": "Browse products, click Add to Cart, then go to checkout. Review your order before paying — check quantities and delivery costs." },
+    { "icon": "💳", "title": "Safe Payment", "description": "Only enter card details on pages with a padlock icon and https:// in the address bar. Consider using PayPal for extra protection." },
+    { "icon": "🔄", "title": "Returns & Reviews", "description": "Check the returns policy before buying. Read customer reviews to learn about product quality from real buyers." }
+  ],
+  "18": [
+    { "icon": "🏦", "title": "Logging In Safely", "description": "Always type your bank's URL directly — never click email links. Use your official banking app on your phone for extra security." },
+    { "icon": "📲", "title": "Two-Factor Authentication", "description": "Banks send a one-time code to your phone to confirm it is really you. Always enable this extra security layer." },
+    { "icon": "⚠️", "title": "Spotting Fraud", "description": "Banks never ask for your full password or PIN online or by phone. If something feels wrong, call your bank directly." }
+  ],
+  "19": [
+    { "icon": "📷", "title": "Taking Good Photos", "description": "Hold the camera steady, make sure there is good light, and tap the screen to focus before shooting." },
+    { "icon": "🗂️", "title": "Organising Your Gallery", "description": "Create albums by date or topic (Holidays, Family) to keep thousands of photos easy to find." },
+    { "icon": "☁️", "title": "Backing Up Photos", "description": "Enable auto-backup to Google Photos or iCloud so your pictures are safe even if your phone is lost or broken." }
+  ],
+  "20": [
+    { "icon": "▶️", "title": "Streaming Video", "description": "Netflix, YouTube, and Disney+ let you watch films and shows on demand. You need a fast internet connection to stream in HD." },
+    { "icon": "🎵", "title": "Music Streaming", "description": "Spotify and Apple Music give you millions of songs. Download playlists for offline listening when you have no signal." },
+    { "icon": "📹", "title": "Video Calls", "description": "Zoom, Teams, and WhatsApp let you see and talk to people in real time. You need a camera and microphone." }
+  ],
+  "21": [
+    { "icon": "🧹", "title": "Disk Cleanup", "description": "Use Disk Cleanup (Windows) or Storage Management (Mac) to delete temporary files and free up space on your hard drive." },
+    { "icon": "🔄", "title": "Software Updates", "description": "Install updates for your operating system and apps regularly. Updates fix security holes and improve performance." },
+    { "icon": "🌡️", "title": "Keeping Cool", "description": "Keep vents unblocked and clean dust from fans. Overheating slows computers down and can cause permanent damage." }
+  ],
+  "22": [
+    { "icon": "🔁", "title": "Try Restarting First", "description": "Restarting fixes most common problems — slow performance, frozen programs, and network issues. Always try this first." },
+    { "icon": "🌐", "title": "Search for the Error", "description": "Copy the exact error message and paste it into Google. Millions of people have had the same problem and found solutions." },
+    { "icon": "📞", "title": "Ask for Help", "description": "Contact your internet provider for connection issues, your computer manufacturer for hardware faults, or a local tech shop." }
+  ],
+  "23": [
+    { "icon": "☁️", "title": "Google Drive", "description": "Free storage for photos, documents, and files. Access from any device. 15GB free with a Google account." },
+    { "icon": "🍎", "title": "iCloud", "description": "Apple's cloud service automatically backs up iPhones, iPads, and Macs. 5GB free, easy to upgrade." },
+    { "icon": "📦", "title": "OneDrive", "description": "Built into Windows. Automatically syncs your Desktop and Documents folders so they are always backed up." }
+  ],
+  "24": [
+    { "icon": "📱", "title": "Smartphone Apps", "description": "Apps are small programs. The App Store (Apple) and Google Play Store (Android) have millions of free and paid apps." },
+    { "icon": "📶", "title": "Mobile Data", "description": "Your phone connects to the internet using Wi-Fi or mobile data (4G/5G). Use Wi-Fi when available to save your data allowance." },
+    { "icon": "🔋", "title": "Battery & Storage", "description": "Close unused apps to save battery. Delete old photos and apps you no longer use to free up storage space." }
+  ],
+  "25": [
+    { "icon": "🤝", "title": "Respect Online", "description": "Treat people with the same kindness online as you would in person. Words can hurt even through a screen." },
+    { "icon": "🔏", "title": "Protect Your Privacy", "description": "Think before you share. Personal information like your address, school, or daily routine should stay private online." },
+    { "icon": "✅", "title": "Verify Before Sharing", "description": "Misinformation spreads fast. Check facts with trusted news sources before sharing posts, photos, or videos." }
+  ]
+}

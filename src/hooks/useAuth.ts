@@ -1,23 +1,25 @@
-import { useSelector } from 'react-redux';
-import { RootState } from '../store/store';
-import { login, logout, register } from '../store/slices/userSlice';
-import { useAppDispatch } from '../store/store';
+import { getFromStorage, setToStorage } from '../services/api';
+
+interface AuthUser {
+  username: string;
+  email: string;
+}
 
 export const useAuth = () => {
-  const dispatch = useAppDispatch();
-  const user = useSelector((state: RootState) => state.user.currentUser);
-
-  const handleLogin = (email: string, password: string) => {
-    dispatch(login({ email, password }));
+  const register = (username: string, email: string, password: string): void => {
+    const user: AuthUser = { username, email };
+    setToStorage('authUser', user);
+    setToStorage('authPassword', password);
   };
 
-  const handleRegister = (username: string, email: string, password: string) => {
-    dispatch(register({ username, email, password }));
+  const getUser = (): AuthUser | null => {
+    return getFromStorage<AuthUser>('authUser');
   };
 
-  const handleLogout = () => {
-    dispatch(logout());
+  const logout = (): void => {
+    localStorage.removeItem('authUser');
+    localStorage.removeItem('authPassword');
   };
 
-  return { user, login: handleLogin, register: handleRegister, logout: handleLogout };
+  return { register, getUser, logout };
 };

@@ -1,9 +1,11 @@
 import React from 'react';
 import { useProgress } from '../hooks/useProgress';
 import ProgressBar from '../components/ProgressBar';
+import { getLessons } from '../services/lessonService';
 
 const Progress: React.FC = () => {
   const { progress } = useProgress();
+  const totalLessons = getLessons().length;
 
   return (
     <div className="p-6" role="main">
@@ -11,7 +13,7 @@ const Progress: React.FC = () => {
       
       <div className="mb-6">
         <h2 className="text-xl font-semibold mb-2">Course Completion</h2>
-        <ProgressBar progress={(progress.completedLessons.length / 2) * 100} label="Lessons completed" />
+        <ProgressBar progress={(progress.completedLessons.length / totalLessons) * 100} label="Lessons completed" />
       </div>
 
       <div className="mb-6">
