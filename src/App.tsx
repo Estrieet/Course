@@ -16,6 +16,7 @@ import Progress from './pages/Progress';
 import Help from './pages/Help';
 import Teacher from './pages/Teacher';
 import Register from './pages/Register';
+import AIAssistant from './pages/AIAssistant';
 
 const AppContent: React.FC = () => {
   return (
@@ -37,6 +38,7 @@ const AppContent: React.FC = () => {
               <Route path="/quiz/:id" element={<Quiz />} />
               <Route path="/progress" element={<Progress />} />
               <Route path="/teacher" element={<Teacher />} />
+              <Route path="/ai-assistant" element={<AIAssistant />} />
               <Route path="/help" element={<Help />} />
               <Route path="/register" element={<Register />} />
               <Route path="*" element={<Home />} />

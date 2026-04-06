@@ -41,6 +41,11 @@ const Sidebar: React.FC = () => {
             </Link>
           </li>
           <li>
+            <Link to="/ai-assistant" className="block rounded-[1.75rem] border border-white/10 bg-slate-900/80 px-5 py-3 text-sm transition hover:bg-slate-800 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400/70">
+              AI Assistant
+            </Link>
+          </li>
+          <li>
             <Link to="/help" className="block rounded-[1.75rem] border border-white/10 bg-slate-900/80 px-5 py-3 text-sm transition hover:bg-slate-800 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400/70">
               Help Center
             </Link>
