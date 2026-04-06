@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction to Computers",
+    "content": "Learn the basics of computers, hardware, and software.",
+    "module": "Basics",
+    "level": 1,
+    "homework": { "id": 1, "question": "Name two main components of a computer.", "completed": false },
+    "quiz": { "id": 1, "questions": [
+        { "id": 1, "question": "What does CPU stand for?", "options": ["Central Processing Unit","Computer Personal Unit","Central Power Unit"], "answer": 0 },
+        { "id": 2, "question": "Which device is an output device?", "options": ["Monitor","Keyboard","Mouse"], "answer": 0 }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "title": "Introduction to the Internet",
+    "content": "Learn how the internet works and safe browsing practices.",
+    "module": "Basics",
+    "level": 1,
+    "homework": { "id": 2, "question": "Explain what a browser is.", "completed": false },
+    "quiz": { "id": 2, "questions": [
+        { "id": 1, "question": "Which of these is a search engine?", "options": ["Google","Windows","Linux"], "answer": 0 }
+      ]
+    }
+  }
+]
