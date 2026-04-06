@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Estrieet/Course/static/css/main.349009ba.css",
+    "main.js": "/Estrieet/Course/static/js/main.e002e03f.js",
+    "index.html": "/Estrieet/Course/index.html",
+    "main.349009ba.css.map": "/Estrieet/Course/static/css/main.349009ba.css.map",
+    "main.e002e03f.js.map": "/Estrieet/Course/static/js/main.e002e03f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.349009ba.css",
+    "static/js/main.e002e03f.js"
+  ]
+}
