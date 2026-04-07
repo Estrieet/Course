@@ -75,51 +75,41 @@
     { "icon": "🖨️", "title": "Printing a Document", "description": "Go to File > Print (or Ctrl+P). Choose your printer, check the preview, and click Print. Save as PDF if you have no printer." }
   ],
   "16": [
-    { "icon": "➕", "title": "Basic Formulas", "description": "Start a formula with =. Type =SUM(A1:A10) to add up a column, or =AVERAGE(B2:B8) to find the average of a range." },
-    { "icon": "📊", "title": "Charts & Graphs", "description": "Select your data, then click Insert > Chart. Bar, line, and pie charts make numbers easy to understand at a glance." },
-    { "icon": "🗃️", "title": "Sorting & Filtering", "description": "Click on a column header and use Sort A→Z to order data. Use Filter to show only rows that match certain conditions." }
-  ],
-  "17": [
-    { "icon": "🛒", "title": "Adding to Cart", "description": "Browse products, click Add to Cart, then go to checkout. Review your order before paying — check quantities and delivery costs." },
-    { "icon": "💳", "title": "Safe Payment", "description": "Only enter card details on pages with a padlock icon and https:// in the address bar. Consider using PayPal for extra protection." },
-    { "icon": "🔄", "title": "Returns & Reviews", "description": "Check the returns policy before buying. Read customer reviews to learn about product quality from real buyers." }
-  ],
-  "18": [
     { "icon": "🏦", "title": "Logging In Safely", "description": "Always type your bank's URL directly — never click email links. Use your official banking app on your phone for extra security." },
     { "icon": "📲", "title": "Two-Factor Authentication", "description": "Banks send a one-time code to your phone to confirm it is really you. Always enable this extra security layer." },
     { "icon": "⚠️", "title": "Spotting Fraud", "description": "Banks never ask for your full password or PIN online or by phone. If something feels wrong, call your bank directly." }
   ],
-  "19": [
+  "17": [
     { "icon": "📷", "title": "Taking Good Photos", "description": "Hold the camera steady, make sure there is good light, and tap the screen to focus before shooting." },
     { "icon": "🗂️", "title": "Organising Your Gallery", "description": "Create albums by date or topic (Holidays, Family) to keep thousands of photos easy to find." },
     { "icon": "☁️", "title": "Backing Up Photos", "description": "Enable auto-backup to Google Photos or iCloud so your pictures are safe even if your phone is lost or broken." }
   ],
-  "20": [
+  "18": [
     { "icon": "▶️", "title": "Streaming Video", "description": "Netflix, YouTube, and Disney+ let you watch films and shows on demand. You need a fast internet connection to stream in HD." },
     { "icon": "🎵", "title": "Music Streaming", "description": "Spotify and Apple Music give you millions of songs. Download playlists for offline listening when you have no signal." },
     { "icon": "📹", "title": "Video Calls", "description": "Zoom, Teams, and WhatsApp let you see and talk to people in real time. You need a camera and microphone." }
   ],
-  "21": [
+  "19": [
     { "icon": "🧹", "title": "Disk Cleanup", "description": "Use Disk Cleanup (Windows) or Storage Management (Mac) to delete temporary files and free up space on your hard drive." },
     { "icon": "🔄", "title": "Software Updates", "description": "Install updates for your operating system and apps regularly. Updates fix security holes and improve performance." },
     { "icon": "🌡️", "title": "Keeping Cool", "description": "Keep vents unblocked and clean dust from fans. Overheating slows computers down and can cause permanent damage." }
   ],
-  "22": [
+  "20": [
     { "icon": "🔁", "title": "Try Restarting First", "description": "Restarting fixes most common problems — slow performance, frozen programs, and network issues. Always try this first." },
     { "icon": "🌐", "title": "Search for the Error", "description": "Copy the exact error message and paste it into Google. Millions of people have had the same problem and found solutions." },
     { "icon": "📞", "title": "Ask for Help", "description": "Contact your internet provider for connection issues, your computer manufacturer for hardware faults, or a local tech shop." }
   ],
-  "23": [
+  "21": [
     { "icon": "☁️", "title": "Google Drive", "description": "Free storage for photos, documents, and files. Access from any device. 15GB free with a Google account." },
     { "icon": "🍎", "title": "iCloud", "description": "Apple's cloud service automatically backs up iPhones, iPads, and Macs. 5GB free, easy to upgrade." },
     { "icon": "📦", "title": "OneDrive", "description": "Built into Windows. Automatically syncs your Desktop and Documents folders so they are always backed up." }
   ],
-  "24": [
+  "22": [
     { "icon": "📱", "title": "Smartphone Apps", "description": "Apps are small programs. The App Store (Apple) and Google Play Store (Android) have millions of free and paid apps." },
     { "icon": "📶", "title": "Mobile Data", "description": "Your phone connects to the internet using Wi-Fi or mobile data (4G/5G). Use Wi-Fi when available to save your data allowance." },
     { "icon": "🔋", "title": "Battery & Storage", "description": "Close unused apps to save battery. Delete old photos and apps you no longer use to free up storage space." }
   ],
-  "25": [
+  "23": [
     { "icon": "🤝", "title": "Respect Online", "description": "Treat people with the same kindness online as you would in person. Words can hurt even through a screen." },
     { "icon": "🔏", "title": "Protect Your Privacy", "description": "Think before you share. Personal information like your address, school, or daily routine should stay private online." },
     { "icon": "✅", "title": "Verify Before Sharing", "description": "Misinformation spreads fast. Check facts with trusted news sources before sharing posts, photos, or videos." }

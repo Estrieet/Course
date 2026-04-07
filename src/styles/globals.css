@@ -4,6 +4,14 @@
 
 :root {
   color-scheme: dark;
+  --primary-bg: #000000;
+  --secondary-bg: #111111;
+  --card-bg: #1a1a1a;
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --accent: #0a84ff;
+  --border: #2a2a2a;
+  --hover: #262626;
 }
 
 html {
@@ -11,10 +19,10 @@ html {
 }
 
 body {
-  @apply bg-slate-950 text-slate-100 antialiased;
-  font-family: 'Inter', sans-serif;
-  background-image: radial-gradient(circle at top left, rgba(139, 92, 246, 0.18), transparent 26%), radial-gradient(circle at 20% 20%, rgba(236, 72, 153, 0.14), transparent 30%), radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.12), transparent 32%);
-  background-attachment: fixed;
+  @apply bg-black text-white antialiased;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-primary);
+  background-color: var(--primary-bg);
 }
 
 button,
@@ -24,64 +32,191 @@ select {
   font: inherit;
 }
 
+/* ── Typography ─────────────────────────────────────────────── */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  @apply text-3xl sm:text-4xl font-bold;
+}
+
+h2 {
+  @apply text-2xl sm:text-3xl font-bold;
+}
+
+h3 {
+  @apply text-xl sm:text-2xl font-semibold;
+}
+
+p {
+  @apply leading-relaxed;
+  color: var(--text-secondary);
+}
+
+/* ── Cards & Containers ─────────────────────────────────────── */
+
 .glass-card {
-  @apply bg-white/10 border border-white/10 shadow-2xl shadow-slate-950/20 backdrop-blur-xl;
+  @apply rounded-2xl border backdrop-blur-sm;
+  background-color: var(--card-bg);
+  border-color: var(--border);
+}
+
+.modern-card {
+  @apply rounded-2xl shadow-lg;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.modern-card:hover {
+  background-color: var(--hover);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* ── Buttons ────────────────────────────────────────────────── */
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold text-white transition duration-200;
+  background-color: var(--accent);
+}
+
+.btn-primary:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(10, 132, 255, 0.2);
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold transition duration-200;
+  background-color: var(--secondary-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  background-color: var(--hover);
+  border-color: var(--accent);
 }
 
 .gradient-btn {
-  @apply inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold text-white shadow-xl shadow-violet-500/20 transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50;
-  background-image: linear-gradient(135deg, #8b5cf6 0%, #ec4899 52%, #a855f7 100%);
+  @apply inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold text-white transition duration-200;
+  background: linear-gradient(135deg, var(--accent) 0%, #0A7CE2 100%);
+}
+
+.gradient-btn:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(10, 132, 255, 0.25);
 }
 
 .primary-btn {
-  @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-white shadow-xl shadow-violet-500/20 transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50;
-  background-image: linear-gradient(135deg, #8b5cf6 0%, #ec4899 52%, #a855f7 100%);
+  @apply btn-primary;
+}
+
+/* ── Input Fields ─────────────────────────────────────────── */
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+  @apply rounded-lg border px-4 py-2 transition duration-200;
+  background-color: var(--secondary-bg);
+  border-color: var(--border);
+  color: var(--text-primary);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.1);
 }
 
 /* ── Animations ─────────────────────────────────────────────── */
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(14px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { 
+    opacity: 0; 
+    transform: translateY(16px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
 }
 
 @keyframes slideInLeft {
-  from { opacity: 0; transform: translateX(-18px); }
-  to   { opacity: 1; transform: translateX(0); }
+  from { 
+    opacity: 0; 
+    transform: translateX(-16px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateX(0); 
+  }
 }
 
 @keyframes slideInRight {
-  from { opacity: 0; transform: translateX(18px); }
-  to   { opacity: 1; transform: translateX(0); }
+  from { 
+    opacity: 0; 
+    transform: translateX(16px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateX(0); 
+  }
 }
 
 @keyframes scaleIn {
-  from { opacity: 0; transform: scale(0.93); }
-  to   { opacity: 1; transform: scale(1); }
+  from { 
+    opacity: 0; 
+    transform: scale(0.95); 
+  }
+  to { 
+    opacity: 1; 
+    transform: scale(1); 
+  }
 }
 
-@keyframes bounceIn {
-  0%   { opacity: 0; transform: scale(0.78); }
-  55%  { transform: scale(1.06); }
-  100% { opacity: 1; transform: scale(1); }
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0); }
-  50%       { box-shadow: 0 0 24px 4px rgba(139, 92, 246, 0.35); }
+.animate-fade-in { 
+  animation: fadeInUp 0.5s ease-out both; 
 }
 
-@keyframes shimmer {
-  from { background-position: -200% center; }
-  to   { background-position: 200% center; }
+.animate-slide-left { 
+  animation: slideInLeft 0.5s ease-out both; 
 }
 
-.animate-fade-in    { animation: fadeInUp 0.55s ease-out both; }
-.animate-slide-left { animation: slideInLeft 0.5s ease-out both; }
-.animate-slide-right{ animation: slideInRight 0.5s ease-out both; }
-.animate-scale-in   { animation: scaleIn 0.4s ease-out both; }
-.animate-bounce-in  { animation: bounceIn 0.55s cubic-bezier(0.34,1.56,0.64,1) both; }
-.animate-pulse-glow { animation: pulseGlow 2.4s ease-in-out infinite; }
+.animate-slide-right { 
+  animation: slideInRight 0.5s ease-out both; 
+}
+
+.animate-scale-in { 
+  animation: scaleIn 0.4s ease-out both; 
+}
+
+.animate-slide-down {
+  animation: slideDown 0.3s ease-out both;
+}
 
 /* Stagger delays for list children */
 .stagger-1 { animation-delay: 0.05s; }

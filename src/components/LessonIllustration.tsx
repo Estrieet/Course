@@ -494,206 +494,90 @@ const svgs: Record<number, React.ReactElement> = {
     </svg>
   ),
 
-  /* 16 — Spreadsheets */
+  /* 16 — Online Banking */
   16: (
-    <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-      {defs}
-      <rect width="400" height="200" fill="url(#bg)" rx="16" />
-      {/* Grid */}
-      <rect x="30" y="20" width="220" height="160" rx="6" fill="#0f0f1a" stroke="#334155" strokeWidth="1.5" />
-      {/* Header row */}
-      <rect x="30" y="20" width="220" height="22" rx="6" fill="#1e1b2e" />
-      <rect x="30" y="34" width="220" height="8" fill="#1e1b2e" />
-      {['', 'A', 'B', 'C', 'D'].map((h, i) => (
-        <text key={i} x={54 + i * 44} y={35} textAnchor="middle" fill="#8b5cf6" fontSize="10" fontWeight="bold" fontFamily="sans-serif">{h}</text>
-      ))}
-      {/* Rows */}
-      {[
-        ['1', 'Jan', '500', '320', '180'],
-        ['2', 'Feb', '620', '410', '210'],
-        ['3', 'Mar', '580', '390', '190'],
-        ['4', 'Apr', '700', '450', '250'],
-      ].map((row, ri) => (
-        <g key={ri}>
-          <rect x="30" y={42 + ri * 22} width="220" height="22" fill={ri % 2 ? '#0d0d1a' : '#0a0a12'} />
-          {row.map((cell, ci) => (
-            <text key={ci} x={54 + ci * 44} y={57 + ri * 22} textAnchor="middle"
-              fill={ci === 0 ? '#64748b' : ci === 1 ? '#c4b5fd' : '#e2e8f0'}
-              fontSize="9" fontFamily="sans-serif">{cell}</text>
-          ))}
-        </g>
-      ))}
-      {/* Sum row */}
-      <rect x="30" y="130" width="220" height="22" fill="#1e1b4b" />
-      {['Σ', '', '2400', '1570', '830'].map((v, i) => (
-        <text key={i} x={54 + i * 44} y={145} textAnchor="middle" fill="#8b5cf6" fontSize="10" fontWeight="bold" fontFamily="sans-serif">{v}</text>
-      ))}
-      {/* Bar chart */}
-      <rect x="270" y="20" width="110" height="160" rx="6" fill="#0f0f1a" stroke="#334155" strokeWidth="1" />
-      <text x="325" y="38" textAnchor="middle" fill="#94a3b8" fontSize="9" fontFamily="sans-serif">Sales Chart</text>
-      {[
-        { h: 70, color: '#8b5cf6', label: 'Jan' },
-        { h: 88, color: '#a78bfa', label: 'Feb' },
-        { h: 80, color: '#ec4899', label: 'Mar' },
-        { h: 100, color: 'url(#vg)', label: 'Apr' },
-      ].map((bar, i) => (
-        <g key={i}>
-          <rect x={281 + i * 24} y={155 - bar.h} width="18" height={bar.h} rx="3" fill={bar.color} />
-          <text x={290 + i * 24} y={168} textAnchor="middle" fill="#64748b" fontSize="7" fontFamily="sans-serif">{bar.label}</text>
-        </g>
-      ))}
-    </svg>
-  ),
-
-  /* 17 — Online Shopping */
-  17: (
-    <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-      {defs}
-      <rect width="400" height="200" fill="url(#bg)" rx="16" />
-      {/* Product cards */}
-      {[
-        { x: 25, color: '#8b5cf6', name: 'Laptop', price: '$499' },
-        { x: 110, color: '#ec4899', name: 'Headset', price: '$79' },
-        { x: 195, color: '#34d399', name: 'Tablet', price: '$299' },
-      ].map((p, i) => (
-        <g key={i}>
-          <rect x={p.x} y={20} width="75" height="120" rx="8" fill="#1e1b2e" stroke="#334155" strokeWidth="1.5" />
-          <rect x={p.x} y={20} width="75" height="55" rx="8" fill={p.color} opacity="0.2" />
-          <rect x={p.x} y={55} width="75" height="20" fill={p.color} opacity="0.2" />
-          <text x={p.x + 37} y={55} textAnchor="middle" fill={p.color} fontSize="20" fontFamily="sans-serif">□</text>
-          <text x={p.x + 37} y={92} textAnchor="middle" fill="#e2e8f0" fontSize="9" fontFamily="sans-serif">{p.name}</text>
-          <text x={p.x + 37} y={106} textAnchor="middle" fill={p.color} fontSize="11" fontWeight="bold" fontFamily="sans-serif">{p.price}</text>
-          <rect x={p.x + 8} y={112} width="60" height="20" rx="10" fill={p.color} opacity="0.8" />
-          <text x={p.x + 37} y={126} textAnchor="middle" fill="#fff" fontSize="9" fontFamily="sans-serif">Add to Cart</text>
-        </g>
-      ))}
-      {/* Cart */}
-      <rect x="295" y="20" width="85" height="120" rx="8" fill="#1e1b4b" stroke="#8b5cf6" strokeWidth="1.5" />
-      <text x="337" y="40" textAnchor="middle" fill="#c4b5fd" fontSize="10" fontWeight="bold" fontFamily="sans-serif">🛒 Cart</text>
-      <line x1="303" y1="48" x2="372" y2="48" stroke="#334155" strokeWidth="1" />
-      {['Laptop', 'Headset'].map((item, i) => (
-        <text key={i} x="305" y={62 + i * 16} fill="#94a3b8" fontSize="8" fontFamily="sans-serif">• {item}</text>
-      ))}
-      <line x1="303" y1="98" x2="372" y2="98" stroke="#334155" strokeWidth="1" />
-      <text x="305" y="112" fill="#64748b" fontSize="8" fontFamily="sans-serif">Total:</text>
-      <text x="370" y="112" textAnchor="end" fill="#8b5cf6" fontSize="10" fontWeight="bold" fontFamily="sans-serif">$578</text>
-      <rect x="305" y="118" width="68" height="16" rx="8" fill="url(#vg)" />
-      <text x="339" y="130" textAnchor="middle" fill="#fff" fontSize="9" fontFamily="sans-serif">Checkout</text>
-      {/* Lock */}
-      <text x="200" y="165" textAnchor="middle" fill="#22c55e" fontSize="10" fontFamily="sans-serif">🔒 Secure checkout — look for https://</text>
-    </svg>
-  ),
-
-  /* 18 — Online Banking */
-  18: (
     <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
       {defs}
       <rect width="400" height="200" fill="url(#bg)" rx="16" />
       {/* Bank building */}
       <rect x="130" y="100" width="140" height="70" fill="#1e1b2e" stroke="#8b5cf6" strokeWidth="2" />
-      {/* Columns */}
       {[150, 175, 200, 225, 245].map((x, i) => (
         <rect key={i} x={x} y={105} width="10" height="60" fill="#2d1b69" />
       ))}
-      {/* Roof */}
       <polygon points="120,100 200,50 280,100" fill="#1e1b4b" stroke="#8b5cf6" strokeWidth="2" />
-      {/* Steps */}
       <rect x="130" y="168" width="140" height="8" rx="2" fill="#2d1b69" />
       <rect x="120" y="175" width="160" height="8" rx="2" fill="#1e1b4b" />
-      {/* Shield overlay */}
       <path d="M200,65 L220,75 L220,95 Q220,110 200,115 Q180,110 180,95 L180,75 Z" fill="none" stroke="url(#vg)" strokeWidth="2" />
       <polyline points="191,90 199,98 213,82" fill="none" stroke="#22c55e" strokeWidth="2.5" strokeLinecap="round" />
-      {/* Text */}
       <text x="200" y="35" textAnchor="middle" fill="#c4b5fd" fontSize="11" fontWeight="bold" fontFamily="sans-serif">ONLINE BANKING</text>
       <text x="200" y="185" textAnchor="middle" fill="#64748b" fontSize="10" fontFamily="sans-serif">Always use official bank websites and strong passwords</text>
     </svg>
   ),
 
-  /* 19 — Digital Photos */
-  19: (
+  /* 17 — Digital Photos */
+  17: (
     <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
       {defs}
       <rect width="400" height="200" fill="url(#bg)" rx="16" />
-      {/* Camera */}
       <rect x="120" y="55" width="160" height="110" rx="12" fill="#1e1b2e" stroke="#8b5cf6" strokeWidth="2" />
       <rect x="145" y="45" width="60" height="18" rx="6" fill="#1e1b4b" stroke="#8b5cf6" strokeWidth="1.5" />
-      {/* Lens */}
       <circle cx="200" cy="115" r="40" fill="#0a0a14" stroke="#8b5cf6" strokeWidth="2" />
       <circle cx="200" cy="115" r="30" fill="#0f0f1a" stroke="#6d28d9" strokeWidth="1.5" />
       <circle cx="200" cy="115" r="20" fill="url(#vg)" opacity="0.4" />
       <circle cx="200" cy="115" r="10" fill="url(#vg)" opacity="0.7" />
       <circle cx="192" cy="107" r="4" fill="white" opacity="0.3" />
-      {/* Shutter button */}
       <circle cx="255" cy="70" r="10" fill="#8b5cf6" />
-      {/* Photo thumbnails */}
-      {[
-        { x: 22, color: '#8b5cf6' },
-        { x: 55, color: '#ec4899' },
-        { x: 88, color: '#34d399' },
-      ].map((t, i) => (
+      {[{ x: 22, color: '#8b5cf6' },{ x: 55, color: '#ec4899' },{ x: 88, color: '#34d399' }].map((t, i) => (
         <rect key={i} x={t.x} y={60} width="26" height="26" rx="4" fill={t.color} opacity="0.4" stroke={t.color} strokeWidth="1" />
       ))}
-      {[
-        { x: 295, color: '#f59e0b' },
-        { x: 328, color: '#38bdf8' },
-        { x: 361, color: '#a78bfa' },
-      ].map((t, i) => (
+      {[{ x: 295, color: '#f59e0b' },{ x: 328, color: '#38bdf8' },{ x: 361, color: '#a78bfa' }].map((t, i) => (
         <rect key={i} x={t.x} y={60} width="26" height="26" rx="4" fill={t.color} opacity="0.4" stroke={t.color} strokeWidth="1" />
       ))}
     </svg>
   ),
 
-  /* 20 — Video and Music */
-  20: (
+  /* 18 — Video and Music */
+  18: (
     <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
       {defs}
       <rect width="400" height="200" fill="url(#bg)" rx="16" />
-      {/* Video player */}
       <rect x="25" y="30" width="180" height="120" rx="8" fill="#0f0f1a" stroke="#8b5cf6" strokeWidth="2" />
       <rect x="25" y="130" width="180" height="20" rx="0" fill="#1e1b2e" />
       <rect x="30" y="135" width="100" height="6" rx="3" fill="#334155" />
       <rect x="30" y="135" width="55" height="6" rx="3" fill="url(#vg)" />
-      {/* Play button */}
       <circle cx="115" cy="85" r="28" fill="#1e1b4b" stroke="#8b5cf6" strokeWidth="2" />
       <polygon points="108,72 108,98 135,85" fill="url(#vg)" />
-      {/* Waveform */}
       <rect x="220" y="30" width="155" height="120" rx="8" fill="#0f0f1a" stroke="#ec4899" strokeWidth="2" />
       <text x="297" y="55" textAnchor="middle" fill="#f9a8d4" fontSize="10" fontFamily="sans-serif">🎵 Now Playing</text>
       {[10,25,40,18,55,38,22,48,30,16,42,28,50,35,20,45].map((h, i) => (
         <rect key={i} x={228 + i * 9} y={120 - h} width="6" height={h} rx="2" fill="#ec4899" opacity={0.4 + i * 0.03} />
       ))}
-      {/* Headphones */}
       <path d="M240,140 Q240,165 255,168 L255,160 Q248,158 248,150 L248,145 Z" fill="#ec4899" opacity="0.7" />
       <path d="M360,140 Q360,165 345,168 L345,160 Q352,158 352,150 L352,145 Z" fill="#ec4899" opacity="0.7" />
       <path d="M248,145 Q300,125 352,145" fill="none" stroke="#ec4899" strokeWidth="2.5" />
     </svg>
   ),
 
-  /* 21 — Computer Maintenance */
-  21: (
+  /* 19 — Computer Maintenance */
+  19: (
     <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
       {defs}
       <rect width="400" height="200" fill="url(#bg)" rx="16" />
-      {/* Computer */}
       <rect x="110" y="40" width="180" height="110" rx="8" fill="#0f0f1a" stroke="#334155" strokeWidth="2" />
       <rect x="120" y="50" width="160" height="88" rx="4" fill="#1e1b2e" />
       <rect x="155" y="150" width="90" height="12" rx="3" fill="#1e1b2e" />
-      {/* Dust particles */}
       {[[130,60],[260,55],[145,120],[255,115],[200,45]].map(([x, y], i) => (
         <circle key={i} cx={x} cy={y} r="3" fill="#f59e0b" opacity="0.6" />
       ))}
-      {/* Progress bar */}
       <rect x="135" y="90" width="130" height="12" rx="6" fill="#0d0d1a" stroke="#334155" strokeWidth="1" />
       <rect x="135" y="90" width="95" height="12" rx="6" fill="url(#vg)" />
       <text x="200" y="100" textAnchor="middle" fill="#fff" fontSize="7" fontFamily="sans-serif">Cleaning... 73%</text>
       <text x="200" y="118" textAnchor="middle" fill="#94a3b8" fontSize="8" fontFamily="sans-serif">Disk Cleanup Running</text>
-      {/* Wrench */}
       <g transform="translate(310,60) rotate(-35)">
         <rect x="-5" y="-30" width="10" height="50" rx="4" fill="#8b5cf6" />
         <circle cx="0" cy="-30" r="10" fill="none" stroke="#8b5cf6" strokeWidth="3" />
         <rect x="-5" y="18" width="10" height="14" rx="2" fill="#8b5cf6" />
       </g>
-      {/* Checklist */}
       {[
         { done: true, text: 'Delete temp files' },
         { done: true, text: 'Update software' },
@@ -709,36 +593,28 @@ const svgs: Record<number, React.ReactElement> = {
     </svg>
   ),
 
-  /* 22 — Troubleshooting */
-  22: (
+  /* 20 — Troubleshooting */
+  20: (
     <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
       {defs}
       <rect width="400" height="200" fill="url(#bg)" rx="16" />
-      {/* Flowchart */}
-      {/* Start */}
       <rect x="160" y="15" width="80" height="28" rx="14" fill="url(#vg)" />
       <text x="200" y="33" textAnchor="middle" fill="#fff" fontSize="10" fontFamily="sans-serif">Problem?</text>
-      <line x1="200" y1="43" x2="200" y2="58" stroke="#8b5cf6" strokeWidth="1.5" markerEnd="url(#arr)" />
-      {/* Diamond */}
+      <line x1="200" y1="43" x2="200" y2="58" stroke="#8b5cf6" strokeWidth="1.5" />
       <polygon points="200,58 240,80 200,102 160,80" fill="#1e1b4b" stroke="#8b5cf6" strokeWidth="1.5" />
       <text x="200" y="84" textAnchor="middle" fill="#c4b5fd" fontSize="9" fontFamily="sans-serif">Restart?</text>
-      {/* Yes branch */}
       <line x1="240" y1="80" x2="300" y2="80" stroke="#22c55e" strokeWidth="1.5" />
       <rect x="300" y="66" width="70" height="28" rx="6" fill="#14532d" stroke="#22c55e" strokeWidth="1.5" />
       <text x="335" y="84" textAnchor="middle" fill="#86efac" fontSize="9" fontFamily="sans-serif">✓ Fixed!</text>
-      {/* No branch */}
       <line x1="200" y1="102" x2="200" y2="115" stroke="#ef4444" strokeWidth="1.5" />
       <polygon points="200,115 240,137 200,159 160,137" fill="#1e1b2e" stroke="#ec4899" strokeWidth="1.5" />
       <text x="200" y="141" textAnchor="middle" fill="#f9a8d4" fontSize="9" fontFamily="sans-serif">Google it?</text>
-      {/* Yes */}
       <line x1="240" y1="137" x2="290" y2="137" stroke="#22c55e" strokeWidth="1.5" />
       <rect x="290" y="123" width="80" height="28" rx="6" fill="#14532d" stroke="#22c55e" strokeWidth="1.5" />
       <text x="330" y="141" textAnchor="middle" fill="#86efac" fontSize="9" fontFamily="sans-serif">✓ Solution</text>
-      {/* No */}
       <line x1="200" y1="159" x2="200" y2="172" stroke="#f59e0b" strokeWidth="1.5" />
       <rect x="150" y="172" width="100" height="22" rx="11" fill="#451a03" stroke="#f59e0b" strokeWidth="1.5" />
       <text x="200" y="187" textAnchor="middle" fill="#fbbf24" fontSize="9" fontFamily="sans-serif">Ask for help</text>
-      {/* Labels */}
       <text x="268" y="72" fill="#22c55e" fontSize="8" fontFamily="sans-serif">YES</text>
       <text x="205" y="110" fill="#ef4444" fontSize="8" fontFamily="sans-serif">NO</text>
       <text x="268" y="130" fill="#22c55e" fontSize="8" fontFamily="sans-serif">YES</text>
@@ -746,22 +622,19 @@ const svgs: Record<number, React.ReactElement> = {
     </svg>
   ),
 
-  /* 23 — Cloud Storage */
-  23: (
+  /* 21 — Cloud Storage */
+  21: (
     <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
       {defs}
       <rect width="400" height="200" fill="url(#bg)" rx="16" />
-      {/* Cloud */}
       <ellipse cx="200" cy="75" rx="90" ry="45" fill="#1e1b4b" stroke="url(#vg)" strokeWidth="2" />
       <circle cx="145" cy="90" r="30" fill="#1e1b4b" stroke="url(#vg)" strokeWidth="2" />
       <circle cx="255" cy="90" r="30" fill="#1e1b4b" stroke="url(#vg)" strokeWidth="2" />
       <rect x="145" y="85" width="110" height="38" fill="#1e1b4b" />
       <text x="200" y="80" textAnchor="middle" fill="#c4b5fd" fontSize="11" fontWeight="bold" fontFamily="sans-serif">Cloud Storage</text>
-      {/* Upload/Download arrows */}
       <line x1="200" y1="128" x2="200" y2="155" stroke="#8b5cf6" strokeWidth="2" />
       <polygon points="195,140 205,140 200,128" fill="#8b5cf6" />
       <polygon points="195,148 205,148 200,160" fill="#ec4899" />
-      {/* Devices */}
       {[
         { x: 30, y: 130, w: 60, h: 45, label: 'Laptop' },
         { x: 170, y: 158, w: 60, h: 30, label: 'Phone' },
@@ -776,28 +649,24 @@ const svgs: Record<number, React.ReactElement> = {
     </svg>
   ),
 
-  /* 24 — Mobile Devices */
-  24: (
+  /* 22 — Mobile Devices */
+  22: (
     <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
       {defs}
       <rect width="400" height="200" fill="url(#bg)" rx="16" />
-      {/* Phone */}
       <rect x="80" y="20" width="90" height="160" rx="14" fill="#1e1b2e" stroke="#8b5cf6" strokeWidth="2.5" />
       <rect x="88" y="34" width="74" height="120" rx="4" fill="#0a0a14" />
       <circle cx="125" cy="178" r="6" fill="#334155" />
       <rect x="112" y="24" width="26" height="4" rx="2" fill="#334155" />
-      {/* App grid on phone */}
       {[
         '#8b5cf6','#ec4899','#34d399','#f59e0b',
         '#38bdf8','#a78bfa','#fb7185','#22c55e',
       ].map((c, i) => (
         <rect key={i} x={92 + (i % 4) * 18} y={38 + Math.floor(i / 4) * 20} width="14" height="14" rx="4" fill={c} opacity="0.8" />
       ))}
-      {/* Tablet */}
       <rect x="210" y="30" width="150" height="140" rx="10" fill="#1e1b2e" stroke="#ec4899" strokeWidth="2" />
       <rect x="218" y="40" width="134" height="110" rx="4" fill="#0a0a14" />
       <circle cx="285" cy="175" r="6" fill="#334155" />
-      {/* App icons on tablet */}
       {[
         { x: 225, y: 48, color: '#8b5cf6', label: 'Maps' },
         { x: 265, y: 48, color: '#ec4899', label: 'Music' },
@@ -814,16 +683,14 @@ const svgs: Record<number, React.ReactElement> = {
     </svg>
   ),
 
-  /* 25 — Digital Citizenship */
-  25: (
+  /* 23 — Digital Citizenship */
+  23: (
     <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
       {defs}
       <rect width="400" height="200" fill="url(#bg)" rx="16" />
-      {/* Globe */}
       <circle cx="200" cy="95" r="55" fill="#0a0a14" stroke="#8b5cf6" strokeWidth="1.5" />
       <ellipse cx="200" cy="95" rx="22" ry="55" fill="none" stroke="#8b5cf6" strokeWidth="0.8" opacity="0.4" />
       <ellipse cx="200" cy="95" rx="55" ry="20" fill="none" stroke="#8b5cf6" strokeWidth="0.8" opacity="0.4" />
-      {/* People around globe */}
       {[0,60,120,180,240,300].map((deg, i) => {
         const rad = (deg * Math.PI) / 180;
         const cx = 200 + 78 * Math.cos(rad);
@@ -837,7 +704,6 @@ const svgs: Record<number, React.ReactElement> = {
           </g>
         );
       })}
-      {/* Values */}
       {[
         { x: 50, y: 25, text: 'Respect' },
         { x: 320, y: 25, text: 'Privacy' },
@@ -849,6 +715,9 @@ const svgs: Record<number, React.ReactElement> = {
       <text x="200" y="185" textAnchor="middle" fill="#64748b" fontSize="10" fontFamily="sans-serif">Being a responsible and respectful member of the digital world</text>
     </svg>
   ),
+
+
+
 };
 
 const LessonIllustration: React.FC<Props> = ({ lessonId }) => {

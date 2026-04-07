@@ -25,17 +25,38 @@ const QuizForm: React.FC<QuizFormProps> = ({ questions, lessonId, onComplete }) 
 
   return (
     <form onSubmit={handleSubmit} className="space-y-8 p-4" role="form">
-      <div className="rounded-[1.5rem] border border-white/10 bg-slate-900/80 p-6 shadow-xl shadow-slate-950/20">
-        <h2 className="text-2xl font-bold mb-4">Quiz</h2>
+      <div className="modern-card p-6">
+        <h2 className="text-2xl font-bold mb-2">Quiz</h2>
         <p className="text-slate-400">Answer each question and submit when all are selected.</p>
       </div>
       {questions.map((question, qIndex) => (
-        <div key={qIndex} className="rounded-[1.5rem] border border-white/10 bg-slate-900/80 p-6 shadow-xl shadow-slate-950/20">
-          <div className="mb-4 flex items-center justify-between gap-4">
+        <div key={qIndex} className="modern-card p-6 space-y-4">
+          {/* Question Image */}
+          {(question as any).image && (
+            <div className="mb-4 flex justify-center">
+              <div className="relative w-full max-w-[400px] rounded-xl overflow-hidden bg-slate-900">
+                <img
+                  src={(question as any).image}
+                  alt={`Illustration for question ${qIndex + 1}`}
+                  className="w-full h-auto object-cover rounded-xl shadow-lg"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          )}
+
+          {/* Question Header */}
+          <div className="flex items-center justify-between gap-4">
             <h3 className="text-lg font-semibold text-white">Question {qIndex + 1}</h3>
-            <span className="rounded-full bg-white/10 px-3 py-1 text-xs uppercase tracking-[0.2em] text-slate-300">{question.options.length} options</span>
+            <span className="rounded-full bg-blue-500/10 px-3 py-1 text-xs uppercase tracking-[0.2em] text-blue-400">
+              {question.options.length} options
+            </span>
           </div>
-          <p className="mb-4 text-slate-300">{question.question}</p>
+
+          {/* Question Text */}
+          <p className="text-slate-300 text-base">{question.question}</p>
+
+          {/* Answer Options */}
           <div className="grid gap-3 sm:grid-cols-2">
             {question.options.map((option, oIndex) => {
               const isSelected = answers[qIndex] === oIndex;
@@ -44,7 +65,11 @@ const QuizForm: React.FC<QuizFormProps> = ({ questions, lessonId, onComplete }) 
                   key={oIndex}
                   type="button"
                   onClick={() => handleAnswerChange(qIndex, oIndex)}
-                  className={`rounded-2xl border px-4 py-3 text-left transition duration-200 ${isSelected ? 'border-violet-400 bg-violet-500/10 text-white shadow-lg shadow-violet-500/10' : 'border-white/10 bg-white/5 text-slate-200 hover:border-white/20 hover:bg-white/10'}`}
+                  className={`rounded-xl border px-4 py-3 text-left transition duration-200 font-medium ${
+                    isSelected
+                      ? 'border-blue-400 bg-blue-500/15 text-white shadow-lg shadow-blue-500/10'
+                      : 'border-slate-700 bg-slate-800/50 text-slate-200 hover:border-slate-600 hover:bg-slate-800'
+                  }`}
                   aria-pressed={isSelected}
                   aria-label={`Question ${qIndex + 1}, option ${oIndex + 1}: ${option}`}
                 >
@@ -55,9 +80,10 @@ const QuizForm: React.FC<QuizFormProps> = ({ questions, lessonId, onComplete }) 
           </div>
         </div>
       ))}
+
       <button
         type="submit"
-        className="gradient-btn disabled:cursor-not-allowed disabled:opacity-50"
+        className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
         disabled={answers.indexOf(-1) !== -1}
       >
         Submit Quiz

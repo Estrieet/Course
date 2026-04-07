@@ -24,6 +24,7 @@ export interface QuizQuestion {
   question: string;
   options: string[];
   answer: number;
+  image?: string;
 }
 
 export const getLessons = (): Lesson[] => {

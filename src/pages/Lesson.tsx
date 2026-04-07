@@ -25,6 +25,8 @@ const Lesson: React.FC = () => {
   }
 
   const completed = progress.completedLessons.includes(lesson.id);
+  const prevLessonId = lesson.id - 1;
+  const prevLesson = getLessonById(prevLessonId);
   const nextLessonId = lesson.id + 1;
   const nextLesson = getLessonById(nextLessonId);
   const lessonExamples: Example[] = examples[String(lesson.id)] ?? [];
@@ -57,10 +59,18 @@ const Lesson: React.FC = () => {
             <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-violet-500/20 text-violet-300 text-sm font-bold">✓</span>
             <p className="text-lg font-semibold text-white">Lesson complete!</p>
           </div>
-          <div className="grid gap-3 sm:grid-cols-3">
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             <Link to={`/quiz/${lesson.id}`} className="gradient-btn justify-center text-sm">
               Take the Quiz
             </Link>
+            {prevLesson && (
+              <Link
+                to={`/lesson/${prevLessonId}`}
+                className="inline-flex items-center justify-center rounded-full border border-white/10 bg-slate-900/80 px-5 py-3 text-sm font-semibold text-white transition hover:bg-violet-950/80 hover:-translate-y-0.5"
+              >
+                ← Previous Lesson
+              </Link>
+            )}
             {nextLesson && (
               <Link
                 to={`/lesson/${nextLessonId}`}
@@ -131,6 +141,12 @@ const Lesson: React.FC = () => {
               <p className="text-xs text-slate-500 uppercase tracking-[0.22em]">Practice challenge</p>
               <p className="mt-1 text-sm text-slate-300">{lesson.homework.question}</p>
             </div>
+            {prevLesson && (
+              <div className="rounded-[1.5rem] bg-slate-950/90 p-4 border border-white/10">
+                <p className="text-xs text-slate-500 uppercase tracking-[0.22em]">Previous lesson</p>
+                <p className="mt-1 text-sm text-slate-300">{prevLesson.title}</p>
+              </div>
+            )}
             {nextLesson && (
               <div className="rounded-[1.5rem] bg-slate-950/90 p-4 border border-white/10">
                 <p className="text-xs text-slate-500 uppercase tracking-[0.22em]">Next lesson</p>
@@ -152,6 +168,24 @@ const Lesson: React.FC = () => {
               </Link>
             </div>
           )}
+          <div className="flex gap-2 pt-1">
+            {prevLesson && (
+              <Link
+                to={`/lesson/${prevLessonId}`}
+                className="flex-1 inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs font-semibold text-slate-300 transition hover:bg-white/10"
+              >
+                ← Prev
+              </Link>
+            )}
+            {nextLesson && (
+              <Link
+                to={`/lesson/${nextLessonId}`}
+                className="flex-1 inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs font-semibold text-slate-300 transition hover:bg-white/10"
+              >
+                Next →
+              </Link>
+            )}
+          </div>
         </aside>
       </div>
 
